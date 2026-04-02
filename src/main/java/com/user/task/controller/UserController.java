@@ -18,7 +18,7 @@ public class UserController {
     @Autowired
     private TaskServiceIml taskService;
 
-    // ✅ View own tasks
+    // View own tasks
     @GetMapping("/tasks/{userId}")
     public List<Task> getTasks(@PathVariable Long userId) {
         return taskService.getUserTasks(userId);
